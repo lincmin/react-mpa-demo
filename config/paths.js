@@ -56,8 +56,8 @@ module.exports = {
   appPath: resolveApp('.'),
   appBuild: resolveApp(buildPath),
   appPublic: resolveApp('public'),
-  appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appHtml: resolveApp('public/pages/index/index.html'),
+  appIndexJs: resolveModule(resolveApp, 'src/pages/index/index'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
@@ -68,6 +68,9 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
+  // 多页面添加path部分
+  addProductHtml: resolveApp('public/pages/product/add.html'),
+  addProductJs: resolveModule(resolveApp, 'src/pages/product/add'), // 路径可按需指定
 };
 
 
